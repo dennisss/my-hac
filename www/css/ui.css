@@ -1,0 +1,238 @@
+/*
+Copyright (c) 2013 Dennis Shtatnov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+
+.page{
+	font-size: 16px;	
+}
+.page table{
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+ul{
+	width:100%;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+ul li{
+	padding:20px;
+	font-size:16px;
+	width:100%;
+	border-bottom:thin #ccc solid;
+	box-sizing: border-box;
+}
+ul li:last-child{
+	border-bottom:none;
+}
+
+
+
+input, select{
+	-webkit-appearance: none;
+	
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+	
+}
+
+input[type=text], input[type=password], input[type=url], select{
+	/* Find a more elegant way*/
+	/*max-width:100%;*/
+	padding: 8px;
+	/*margin: -8px;*/
+	font-size:16px;
+	width: 100%;
+	
+	
+}
+
+select{
+	-webkit-appearance:none;
+}
+
+input[type=checkbox]{
+	/*height:34px;
+	width:34px;
+*/	
+	height:64px;
+	width:64px;
+	line-height:34px;
+	font-size:24px;
+	margin:0px;
+	padding: 0px;
+	vertical-align: middle;
+	
+}
+input[type=submit]{
+	padding: 8px 12px;
+	/*margin: -8px -12px;*/
+	font-size:16px;
+	-webkit-appearance : none;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+	
+	
+}
+.page table td{
+	/*margin: 2px 0px 2px 0px;*/
+	padding: 10px;
+}
+
+
+/*
+	Begin grades.page Style
+*/
+
+.grades_assignment{
+	float: right;
+	font-size: 12px;
+	margin-right: 2px;
+	border-radius : 4px;
+	text-align: center;
+	
+	padding: 2px;
+
+}
+.grades_newNotifier{
+	/*float: right;
+	font-size: 12px;
+	margin-right: -10px;
+	border-radius : 4px;
+	*/
+	
+	/* Same as above*/
+	float: right;
+	font-size: 12px;
+	margin-right: 2px;
+	border-radius : 4px;
+	text-align: center;
+	
+	padding: 2px;
+	
+	background-color: #ccc;
+	color: #fff;
+	
+	
+
+	
+	
+}
+.grades_percent{
+	float: right;
+	font-size: 12px;
+	color: #000;
+	width: 35px;
+	text-align: center;
+	padding: 2px;
+	margin-right: -10px;
+	border-radius : 4px;
+}
+
+
+/*
+	End grades.page Style
+*/
+
+#calendar {
+	border: 1px solid black;
+	padding:0;
+	margin:0;
+	border-collapse:collapse;
+}
+#calender tr{
+	margin:0;
+	padding:0;	
+}
+#calendar tr td{
+	width:14%;
+	border-spacing:0;
+	margin:0;
+	/*border:1px solid #ccc;*/
+	text-align:right;
+	box-sizing:border-box;
+	padding:5px;
+	border: 1px solid black;
+}
+#calendar tr:first-child{
+	height:25px;	
+}
+
+#calendar tr:first-child td{
+	font-weight:bold;
+	text-align:center !important;
+	border-top-style:none;
+}
+/* Combined with above means no stray invisible borders*/
+#calendar tr:last-child td{border-bottom-style:none;}
+#calendar tr td:first-child{border-left-style:none;	}
+#calendar tr td:last-child{border-right-style:none;}
+
+.checkbox{
+	display:inline-block;
+	width:34px;
+	height:17px;
+	border:1px #000 solid;
+	font-size:32px;
+	margin-right:1px;
+	padding-top:17px;
+	line-height:0;
+	overflow:hidden;
+	float:right;
+}
+
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+
+.spinner    {
+	width:75% !important;
+	height:75% !important;
+	position:relative;
+	left:-5px;
+	vertical-align:middle;
+    -webkit-animation-name: spin; 
+    -webkit-animation-duration: 3000ms;
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin; 
+    -moz-animation-duration: 3000ms;
+    -moz-animation-iteration-count: infinite; 
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin; 
+    -ms-animation-duration: 3000ms;
+    -ms-animation-iteration-count: infinite; 
+    -ms-animation-timing-function: linear;
+}

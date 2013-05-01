@@ -1,0 +1,103 @@
+<!--
+Copyright (c) 2013 Dennis Shtatnov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<!--
+MORE GRADIENTS:
+background: #7d7e7d; /* Old browsers */
+background: -moz-linear-gradient(top,  #7d7e7d 0%, #000000 65%, #050505 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(65%,#000000), color-stop(100%,#050505)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #7d7e7d 0%,#000000 65%,#050505 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #7d7e7d 0%,#000000 65%,#050505 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #7d7e7d 0%,#000000 65%,#050505 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #7d7e7d 0%,#000000 65%,#050505 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#050505',GradientType=0 ); /* IE6-9 */
+-->
+	<title>My HAC</title>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="user-scalable=no, width=device-width" />
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    
+	<!--
+    <script type="text/javascript" src="cordova.ios.js"></script>
+     -->
+    
+    <!--
+    <script type="text/javascript" src="cordova.android.js"></script>
+    -->
+    
+    
+    <script type="text/javascript" charset="utf-8" src="script/ajax.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="lib/json2.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/rjson.js"></script>    
+	<script type="text/javascript" charset="utf-8" src="lib/sha1.js"></script>
+
+    
+    <!-- Updater etc. -->
+    <script type="text/javascript" charset="utf-8" src="version.js"></script>
+	<script type="text/javascript" charset="utf-8" src="core.js"></script>
+    
+
+
+
+    <script type="text/javascript" charset="utf-8" src="script/navigation.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/ui.js"></script>
+    
+	<script type="text/javascript" charset="utf-8" src="script/native.js"></script>
+    
+    <script type="text/javascript" charset="utf-8" src="script/home.page.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/grades.page.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/attendance.page.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/settings.page.js"></script>
+    <script type="text/javascript" charset="utf-8" src="script/login.page.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="script/demo.js"></script>
+    
+    <script type="text/javascript" charset="utf-8" src="script/hac_connector.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/ui.css"  />
+
+
+</head>
+<!-- ontouchmove="stopElastic(event)" onLoad="start();" -->
+<body onLoad="">
+	<div class="row" id="header">
+		<div id="leftButton" style="" ontouchstart="navigation.back();" class="leftb"><img style="width:inherit; height:inherit" src="img/icons/arrow-2.png" /></div><div id="refreshB" ontouchstart="navigation.refresh()" class="refreshb"><img style="width:inherit; height:inherit" src="img/icons/64_refresh.png " /></div>
+		<div id="rightButton" ontouchstart="navigation.pages.login.logout();" class="rightb"><img style="width:inherit; height:inherit" src="img/icons/64_logout.png" /></div>
+	
+    	<h1>My HAC</h1>
+    </div>
+
+    <div class="row" id="body">
+    
+    </div>
+    <div class="row" style="display:none" id="footer">
+    	<table style="width:100%; height:100%">
+        	<tr>
+            	<a href="#home"><td onClick="navigation.goto('home');" style="text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);background-image:url('img/icons/home.png');">Home</td></a>
+                <a href="#grades"><td onClick="navigation.goto('grades');" style="text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);background-image:url('img/icons/book.png');">Grades</td></a>
+                <a href="#attendance"><td onClick="navigation.goto('attendance');" style="text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);background-image:url('img/icons/calendar.png');">Attendance</td></a>
+                <a href="#settings"><td onClick="navigation.goto('settings');" style="text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);background-image:url('img/icons/engine.png');">Settings</td></a>
+            </tr>
+        </table>
+    </div>  
+
+    <div style="visibility:hidden; display:none" id="parserPlace"></div>
+</body>
+</html>
