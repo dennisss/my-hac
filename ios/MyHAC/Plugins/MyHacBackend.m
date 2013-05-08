@@ -75,10 +75,15 @@ static MyHacBackend *instance;
 - (void) setup:(CDVInvokedUrlCommand *)command
 {
     if(script != nil){
-        /* Cleanup old setup */
-        [Classes dealloc];
-        [BaseAddress dealloc];
-        [Run dealloc];
+        @try {
+            /* Cleanup old setup */
+            //[Classes release];
+            //[BaseAddress release];
+            //[Run release];
+        }
+        @catch (NSException *e) {
+            NSLog("Exception %@", e);
+        }
     }
     else{
         /* LoggedIn status will be preserved unless first setup */
@@ -132,6 +137,9 @@ static MyHacBackend *instance;
         while (true) {
             if(LoggedIn)
             {
+                @try{
+                
+                
                 int i;
                 
                 NSLog(@"--------");
@@ -237,6 +245,9 @@ static MyHacBackend *instance;
                     }
              
                 }
+                    
+                }
+                @catch (NSException *e) {}
 
             }
 //            NSLog(@"Pausing for %d", NotifInterval);

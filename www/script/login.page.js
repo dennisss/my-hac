@@ -27,18 +27,25 @@ PAGESPACE["login"] = function(page){
 		districts = JSON.parse(window.localStorage.getItem("d"))
 	}
 	
+	
+	
+	
 	//index
 	var selectedDist = window.localStorage.getItem("ds");
 	
 	//var dist = window.localStorage.getItem("d");
 	//var distId = window.localStorage.getItem("dId");
 	
+	
+	
+	
+	
 	var stud = window.localStorage.getItem("s");
 	//var studId = window.localStorage.getItem("sId");
 	
-	var students = JSON.parse(window.localStorage.getItem("studs"));
-	
-	
+	if(window.localStorage.getItem("studs") !== null){
+		var students = JSON.parse(window.localStorage.getItem("studs"));
+	}
 	
 	this.container.innerHTML = '\
 <table>\
@@ -80,6 +87,8 @@ PAGESPACE["login"] = function(page){
 	this._page.setFocus(this.container);
 	//alert("test");
 
+
+	
 
 	//combine this with showStudents()
 	if(stud !== null && students.length > 0){
@@ -328,9 +337,7 @@ PAGESPACE["login"] = function(page){
 				document.getElementById("gpsBtn").firstChild.className = "";
 				
 				if(text !== null){
-					alert(text);
-					var schools = JSON.parse(text).schools
-					alert(schools.length)
+					var schools = JSON.parse(text).schools;
 					
 					if(schools.length === 0){
 						navigator.notification.alert('Sorry no schools are currently registered in your area. Please ask a school administrator to contact us. But, you can still enter your Home Access Center address from your computer\'s address bar by hand');	

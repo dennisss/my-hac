@@ -16,11 +16,10 @@
 var SETTINGS = {
 	DATA : {
 		boolNotifications : false,
-		intNotifInterval : 10, //NO SMALLER THAN 10 MINUTES
+		intNotifInterval : 10, //NO SMALLER THAN 5 MINUTES
 		run : -1,
 		boolCache : true,
 		
-		//color at 50%, interpolate 0 and 100
 		color : [136,191,232]
 	},
 	cacheData : function(){
@@ -195,6 +194,7 @@ PAGESPACE.settings = function(page){
 				}
 				
 				SETTINGS.DATA.intNotifInterval = value;
+				
 				break;
 			case SETTINGS.IDS.RUN:
 				var that = document.getElementById("selectRun");

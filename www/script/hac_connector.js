@@ -411,7 +411,7 @@ var hac = {
 				
 				var sNum = -1
 				
-				hac.data.students = [];
+				
 				var trs = list.getElementsByTagName("tr")
 				console.log(trs.length);
 				for(var x = 1; x < trs.length; x++)
@@ -432,8 +432,9 @@ var hac = {
 						grade : trim(trs[x].children[2].innerText)
 					}
 					
-					if(sid == studentId)
+					if(sid == studentId){
 						sNum = hac.data.students.length;
+					}
 					
 					hac.data.students.push(s);
 				}
@@ -448,6 +449,10 @@ var hac = {
 				
 			}
 			else if(hac.title != "HomeAccess"){
+				if(hac.data.currentStudent == -1){
+					hac.data.students = [];	
+				}
+				
 				hac.loggedIn = true;
 						
 				//if(hac.caching.cacheAvailable())
@@ -466,6 +471,7 @@ var hac = {
 	
 	logout : function(done){
 		hac.data = {};
+		
 		
 		if(!hac.loggedIn)
 		{
