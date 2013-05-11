@@ -28,8 +28,6 @@ PAGESPACE["login"] = function(page){
 	}
 	
 	
-	
-	
 	//index
 	var selectedDist = window.localStorage.getItem("ds");
 	

@@ -256,7 +256,7 @@ function appReady() {
 		MyHacBackend.onDeviceReady();
 	
 		SETTINGS.onDeviceReady();
-		
+
 		navigator.splashscreen.hide();
 		
 	}, false);

@@ -13,7 +13,9 @@
 	Settings Page class
 */
 
+var SETTINGS_VERSION = 1;
 var SETTINGS = {
+	VERSION : SETTINGS_VERSION,
 	DATA : {
 		boolNotifications : false,
 		intNotifInterval : 10, //NO SMALLER THAN 5 MINUTES
@@ -39,7 +41,16 @@ var SETTINGS = {
 	
 	onDeviceReady : function(){
 		if(localStorage.getItem("SETTINGS") !== null){
-			SETTINGS.DATA = RJSON.unpack(JSON.parse(localStorage.getItem("SETTINGS")))
+			try{
+				var data = RJSON.unpack(JSON.parse(localStorage.getItem("SETTINGS")))
+				if(data.version === SETTINGS_VERSION){
+					SETTINGS.DATA = data;	
+				}
+			}
+			catch(e){
+				
+			}
+			
 			console.log("SETTINGS LOADED")
 		}
 		

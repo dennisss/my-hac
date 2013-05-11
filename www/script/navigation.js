@@ -166,7 +166,7 @@ var navigation = {
 	refresh : function(){
 		if(hac.offlineMode)
 		{
-			navigator.notification.alert("Resfreshing not allowed in offline mode. Please log out and log back in online.")
+			navigator.notification.alert("Refreshing is not allowed in offline mode. Please log out and log back in online.")
 			return;	
 		}
 		if(navigation.pages[navigation.activePage].refresh != null)

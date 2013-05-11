@@ -318,11 +318,16 @@ var hac = {
 				ajax.send(url, method, f, data);
 			}
 			
-			if(document.getElementById("ctl00_plnMain_trReferenceNumber") != null){
+			if(document.getElementById("ctl00_plnMain_trReferenceNumber") != null || document.getElementById("ctl00_plnMain_lblSessionTimeout") != null){
 				ui.loadingEnd();
+				
+				navigator.notification.alert("Your session on HAC has timed out or another server error has occured. Please login again.");
+				
 				console.log("OHHH NOOO!!!");
 				callback(false);
 				return;	
+				
+				
 			}
 			
 			for (var key in hac.stateVariables)
@@ -331,7 +336,9 @@ var hac = {
 											/* Can be used because hac.elem is on the page */
 					hac.stateVariables[key] = document.getElementById(key).value;
 				}
-				catch(e){}
+				catch(e){
+					
+				}
 			}
 			
 			ui.loadingEnd();
@@ -513,7 +520,7 @@ var hac = {
 		var success = function(sucess){
 				if(!sucess)
 				{
-					alert("Error retrieving data over network.");
+					navigator.notification.alert("Error retrieving data over network.");
 					done(false);
 					return;	
 				}

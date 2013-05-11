@@ -1,10 +1,9 @@
 My HAC
 ======
-***
 
 Version
 -------
-> The current code represents version 1.0 in the iOS and Android app stores
+> The current code represents version 1.0 in the iOS and Android app stores  
 > Phonegap version: 2.6.0 (iOS), 2.7.0rc1 (Android)
 
 
@@ -20,19 +19,32 @@ Why Open Source?
 - Anyone can contribute. This means that the app can stay up-to-date and bug free longer.
 - Free!
 
+School Administrators
+---------------------
+> Some features of this app use the user's location to automatically configure the app for their school.
+> Unfortunately, many of the schools can have HAC are not yet listed when using these features due to the lack of any reliable database for this data.
+> If you are a school official, you can request that your school district be added.
+> For more information visit [this page.]("http://my-hac.appspot.com/")
 
 File Structure
 -------------
 
->master
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ios : iOS Xcode project and code
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/android : Android Eclipse project and code
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/www : Common HTML/Javascript code
->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/script
+>master  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/ios : iOS Xcode project and code  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/android : Android Eclipse project and code  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/www : Common HTML/Javascript code  
+>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/script  
 
 
 Changelog
 ---------
+
+Version 1.0.1:
+
+- Fixed minor bugs on older android versions
+- Fixed data corruption issues when updating that caused the app to stay on the splash screen 
+- Other minor compatibility fixes
+
 Version 1.0:
 
 - First open source release

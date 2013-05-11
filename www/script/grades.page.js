@@ -193,7 +193,7 @@ PAGESPACE.grades = function(page){
 	this.showAssignment = function(num) {
 		var assignment = hac.data.classes[this.activeClass].runs[hac.data.reportCardRun.latest].assignments[num]
 		
-		navigator.notification.alert("Assigned: " + assignment.dateAssigned + "\r\nDue: " + assignment.dateDue + "\r\nScore: " + assignment.score + " of " + assignment.totalPoints + " points", null, assignment.name); 
+		navigator.notification.alert("Assigned: " + assignment.dateAssigned + "\r\nDue: " + assignment.dateDue + "\r\nScore: " + (isNaN(assignment.score) ? "None" : assignment.score) + " of " + (isNaN(assignment.totalPoints) ? "Any" : assignment.totalPoints) + " points", null, assignment.name); 
 		
 		//var div = ui.overlay(300,150);
 		//div.innerHTML = "<h3>" + assignment.name + "</h3><br/>Assigned: " + assignment.dateAssigned + "<br />Due: " + assignment.dateDue + "</div><br />Score: " + assignment.score + " of " + assignment.totalPoints + " points";
